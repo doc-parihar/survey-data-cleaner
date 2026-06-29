@@ -1,0 +1,7 @@
+timestamp,email_address,what_is_your_age,do_you_consent_to_participate,which_symptoms_apply_select_all,which_symptoms_apply_select_all__fever,which_symptoms_apply_select_all__cough,which_symptoms_apply_select_all__headache,reported_temperature_c,internal_notes
+2024-03-01 09:14:22,p1@example.com,34,True,"Fever, Cough",1,1,0,38.2,
+2024-03-01 10:02:51,p2@example.com,29,False,Cough,0,1,0,37.0,
+2024-03-02 14:33:10,,41,True,"Fever, Headache, Cough",1,1,1,39.1,
+2024-03-01 10:02:51,p2@example.com,29,False,Cough,0,1,0,37.0,
+2024-03-03 08:45:00,p5@example.com,,True,,,,,,
+2024-03-03 19:20:05,p6@example.com,52,False,Headache,0,0,1,36.8,follow up

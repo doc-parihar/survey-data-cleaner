@@ -87,6 +87,13 @@ Useful flags: `--xlsx` (also write `cleaned.xlsx`), `--drop-duplicates`,
 `--drop-empty-cols`, `--missing-threshold 0.95`, `--no-dayfirst`, `--force`
 (overwrite existing outputs). Full list: `survey-clean --help`.
 
+## Example data
+
+A runnable sample lives in [`examples/`](examples/): a messy
+[`responses.csv`](examples/responses.csv) and the exact
+[`sample_output/`](examples/sample_output/) it produces — so you can see the
+results without running anything.
+
 ## Before / after
 
 **Before** — a raw Google Forms export (`responses.csv`):

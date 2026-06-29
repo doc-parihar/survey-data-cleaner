@@ -1,0 +1,20 @@
+# Example overrides for `survey-clean`. All keys are optional and reference
+# columns by their ORIGINAL header text. Try it with:
+#
+#   survey-clean examples/responses.csv --out out/ --rules examples/rules.yaml
+
+rename:
+  "What is your age?": age_years
+
+types:
+  "Reported temperature (C)": number
+
+missing_values:
+  - "n.a."
+
+multiselect:
+  columns: ["Which symptoms apply? (select all)"]
+  delimiter: ","
+
+drop_columns:
+  - "Internal notes"

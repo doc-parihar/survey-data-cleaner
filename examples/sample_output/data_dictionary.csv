@@ -1,0 +1,11 @@
+original_column,cleaned_column,inferred_type,description,n_missing,pct_missing,n_unique,example_value,is_multiselect,parent_column,option,notes
+Timestamp,timestamp,datetime,Timestamp,0,0.0,5,2024-03-01 09:14:22,False,,,
+Email Address,email_address,categorical,Email Address,1,0.1667,4,p1@example.com,False,,,
+What is your age?,what_is_your_age,number,What is your age?,1,0.1667,4,34,False,,,
+Do you consent to participate?,do_you_consent_to_participate,boolean,Do you consent to participate?,0,0.0,2,True,False,,,
+Which symptoms apply? (select all),which_symptoms_apply_select_all,multiselect,Which symptoms apply? (select all),1,0.1667,4,"Fever, Cough",True,,,split into 3 indicator column(s)
+Which symptoms apply? (select all) [Fever],which_symptoms_apply_select_all__fever,indicator,Which symptoms apply? (select all) [Fever],1,0.1667,2,1,False,which_symptoms_apply_select_all,Fever,multi-select indicator for option 'Fever' from 'which_symptoms_apply_select_all'
+Which symptoms apply? (select all) [Cough],which_symptoms_apply_select_all__cough,indicator,Which symptoms apply? (select all) [Cough],1,0.1667,2,1,False,which_symptoms_apply_select_all,Cough,multi-select indicator for option 'Cough' from 'which_symptoms_apply_select_all'
+Which symptoms apply? (select all) [Headache],which_symptoms_apply_select_all__headache,indicator,Which symptoms apply? (select all) [Headache],1,0.1667,2,0,False,which_symptoms_apply_select_all,Headache,multi-select indicator for option 'Headache' from 'which_symptoms_apply_select_all'
+Reported temperature (C),reported_temperature_c,number,Reported temperature (C),1,0.1667,4,38.2,False,,,
+Internal notes,internal_notes,text,Internal notes,5,0.8333,1,follow up,False,,,

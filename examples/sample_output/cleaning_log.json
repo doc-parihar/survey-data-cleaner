@@ -1,0 +1,221 @@
+{
+  "tool": "survey-data-cleaner",
+  "version": "0.1.0",
+  "generated_at": "2026-06-29T04:40:43.579205+00:00",
+  "input": {
+    "path": "examples\\responses.csv",
+    "kind": "csv",
+    "sheet": null,
+    "encoding": "utf-8-sig",
+    "delimiter": ",",
+    "n_rows": 6,
+    "n_cols": 7
+  },
+  "profile": "google_forms",
+  "config": {
+    "profile": "auto",
+    "split_multiselect": true,
+    "dayfirst": true,
+    "drop_duplicates": false,
+    "drop_empty_cols": false,
+    "missing_threshold": 0.9,
+    "report_only": false,
+    "write_xlsx": false,
+    "rules_path": null
+  },
+  "thresholds": {
+    "type_match": 0.9,
+    "categorical_max_unique": 20,
+    "multiselect_min_delimiter_fraction": 0.3,
+    "empty_column": 0.9
+  },
+  "missing_tokens": [
+    "",
+    "-",
+    "--",
+    "n/a",
+    "na",
+    "nil",
+    "none",
+    "null"
+  ],
+  "rows_in": 6,
+  "rows_out": 6,
+  "duplicates": {
+    "found": 1,
+    "dropped": 0,
+    "indices": [
+      3
+    ]
+  },
+  "empty_columns": [],
+  "constant_columns": [
+    "internal_notes"
+  ],
+  "dropped_empty_columns": [],
+  "columns": [
+    {
+      "original_name": "Timestamp",
+      "cleaned_name": "timestamp",
+      "inferred_type": "datetime",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 5,
+      "n_missing_standardised": 0,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": []
+    },
+    {
+      "original_name": "Email Address",
+      "cleaned_name": "email_address",
+      "inferred_type": "categorical",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 4,
+      "n_missing_standardised": 1,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": []
+    },
+    {
+      "original_name": "What is your age?",
+      "cleaned_name": "what_is_your_age",
+      "inferred_type": "number",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 4,
+      "n_missing_standardised": 1,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": []
+    },
+    {
+      "original_name": "Do you consent to participate?",
+      "cleaned_name": "do_you_consent_to_participate",
+      "inferred_type": "boolean",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "n_missing_standardised": 0,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": []
+    },
+    {
+      "original_name": "Which symptoms apply? (select all)",
+      "cleaned_name": "which_symptoms_apply_select_all",
+      "inferred_type": "multiselect",
+      "forced_type": false,
+      "is_multiselect": true,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 4,
+      "n_missing_standardised": 1,
+      "n_coercion_failed": 0,
+      "split_children": [
+        "which_symptoms_apply_select_all__fever",
+        "which_symptoms_apply_select_all__cough",
+        "which_symptoms_apply_select_all__headache"
+      ],
+      "notes": [
+        "split into 3 indicator column(s)"
+      ]
+    },
+    {
+      "original_name": "Which symptoms apply? (select all) [Fever]",
+      "cleaned_name": "which_symptoms_apply_select_all__fever",
+      "inferred_type": "indicator",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 2,
+      "n_missing_standardised": 0,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": [
+        "multi-select indicator for option 'Fever' from 'which_symptoms_apply_select_all'"
+      ]
+    },
+    {
+      "original_name": "Which symptoms apply? (select all) [Cough]",
+      "cleaned_name": "which_symptoms_apply_select_all__cough",
+      "inferred_type": "indicator",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 2,
+      "n_missing_standardised": 0,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": [
+        "multi-select indicator for option 'Cough' from 'which_symptoms_apply_select_all'"
+      ]
+    },
+    {
+      "original_name": "Which symptoms apply? (select all) [Headache]",
+      "cleaned_name": "which_symptoms_apply_select_all__headache",
+      "inferred_type": "indicator",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 2,
+      "n_missing_standardised": 0,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": [
+        "multi-select indicator for option 'Headache' from 'which_symptoms_apply_select_all'"
+      ]
+    },
+    {
+      "original_name": "Reported temperature (C)",
+      "cleaned_name": "reported_temperature_c",
+      "inferred_type": "number",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 1,
+      "pct_missing": 0.1667,
+      "n_unique": 4,
+      "n_missing_standardised": 1,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": []
+    },
+    {
+      "original_name": "Internal notes",
+      "cleaned_name": "internal_notes",
+      "inferred_type": "text",
+      "forced_type": false,
+      "is_multiselect": false,
+      "dropped": false,
+      "n_missing": 5,
+      "pct_missing": 0.8333,
+      "n_unique": 1,
+      "n_missing_standardised": 5,
+      "n_coercion_failed": 0,
+      "split_children": [],
+      "notes": []
+    }
+  ],
+  "warnings": []
+}
