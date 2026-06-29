@@ -203,7 +203,7 @@ def _write_quality_report(result: ProcessResult, out: Path) -> Path:
     ]
     if coercion:
         for name, n in coercion:
-            lines.append(f"- **Coercion warning:** `{name}` had {n} unpar-seable value(s).")
+            lines.append(f"- **Coercion warning:** `{name}` had {n} unparseable value(s).")
     if result.warnings:
         for w in result.warnings:
             lines.append(f"- {w}")

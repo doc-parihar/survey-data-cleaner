@@ -102,13 +102,7 @@ def process(input_path, config: Config) -> ProcessResult:
     # 2. Split multi-select columns (children inserted right after their parent).
     df = _split_multiselect_columns(df, schema, config, profile, rules_delim)
 
-    # 3. Per-column statistics on the cleaned table.
-    present = set(df.columns)
-    for col in schema.columns:
-        if col.cleaned_name in present:
-            populate_stats(col, df[col.cleaned_name])
-
-    # 4. Validate, then optionally act on the findings (non-destructive default).
+    # 3. Validate, then optionally act on the findings (non-destructive default).
     validation = validate(df, empty_threshold=config.missing_threshold)
     n_rows_in = load_result.n_rows
 
@@ -125,6 +119,12 @@ def process(input_path, config: Config) -> ProcessResult:
             if col.cleaned_name in dropped_empty:
                 col.dropped = True
                 col.add_note("dropped as mostly-empty (--drop-empty-cols)")
+
+    # 4. Per-column statistics on the final cleaned table.
+    present = set(df.columns)
+    for col in schema.columns:
+        if col.cleaned_name in present:
+            populate_stats(col, df[col.cleaned_name])
 
     warnings = list(load_result.warnings) + list(schema.warnings)
 

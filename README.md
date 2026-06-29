@@ -4,10 +4,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 
-Clean messy survey exports from **Google Forms, Microsoft Forms, SurveyMonkey,
-Typeform, Qualtrics, REDCap, Kobo, ODK** and similar tools into an
-**analysis-ready table** with a **documented cleaning report** — from one
-command, fully offline.
+Clean messy survey-style CSV/XLSX exports into an **analysis-ready table** with
+a **documented cleaning report** — from one command, fully offline.
+
+v1 includes a dedicated **Google Forms** profile plus a generic survey-table
+fallback for rectangular exports from tools such as Microsoft Forms,
+SurveyMonkey, Typeform, Qualtrics, REDCap, Kobo, ODK, and similar platforms.
 
 ```bash
 survey-clean responses.csv --out outputs/ --split-multiselect
