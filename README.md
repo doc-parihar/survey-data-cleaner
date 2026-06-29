@@ -1,5 +1,9 @@
 # survey-data-cleaner
 
+[![CI](https://github.com/doc-parihar/survey-data-cleaner/actions/workflows/ci.yml/badge.svg)](https://github.com/doc-parihar/survey-data-cleaner/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+
 Clean messy survey exports from **Google Forms, Microsoft Forms, SurveyMonkey,
 Typeform, Qualtrics, REDCap, Kobo, ODK** and similar tools into an
 **analysis-ready table** with a **documented cleaning report** — from one
@@ -198,3 +202,7 @@ pytest
 ```
 
 The test suite uses only synthetic data.
+
+## License
+
+[MIT](LICENSE) © doc-parihar
